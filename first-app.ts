@@ -35,12 +35,22 @@ let arrayStrings: Array<string> = ["a", "b", "c"];
 let arrayObjects: { name: string; age: number }[] = [{ name: "Leo", age: 21 }];
 let arrayIds: Array<{ ids: string | number }> = [{ ids: 123 }, { ids: "321" }];
 
-//FUNCTION TYPES => Params types | return types
+//FUNCTION TYPES => Params types | return types | defining function types
+function greeting(name: string): void {
+  console.log("Hi, " + name);
+}
+
 function add(a: number, b: number): number {
   const result = a + b;
   return result;
 }
 
-function greeting(name: string): void {
-  console.log("Hi, " + name);
+function calculate(
+  a: number,
+  b: number,
+  calcFn: (a: number, b: number) => number
+): number {
+  return calcFn(a, b);
 }
+
+calculate(12, 20, add);
