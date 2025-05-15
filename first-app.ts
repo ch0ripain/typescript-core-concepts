@@ -1,1 +1,1 @@
-let userName = "Leo"; // Infer type string | let userName: string;
+let userName = "Leo"; // Infer type string | let userName: string; && number & boolean
