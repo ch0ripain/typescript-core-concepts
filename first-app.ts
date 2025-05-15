@@ -110,12 +110,18 @@ type AppUser = {
   password: string;
 };
 
+// INTERFACE => interface AppAdmin extends Admin, AppUser { newValues }
 type AppAdmin = Admin & AppUser;
 
 let admin: AppAdmin = {
-  email: "admin@gmai.com",
+  email: "admin@gmail.com",
   password: "123",
   permissions: ["login", "add", "delete"],
 };
 
-// INTERFACE => interface AppAdmin extends Admin, AppUser { newValues }
+//LITERAL TYPES
+let role: "admin" | "user" | "editor";
+role = "user";
+role = "admin";
+role = "editor";
+// role = 'god'
