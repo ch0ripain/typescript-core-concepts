@@ -16,6 +16,7 @@ let user: {
   age: number;
   isAdmin: boolean;
   id: number | string;
+  likes: { post: string }[];
 };
 
 // user = "Leo" => Error
@@ -25,6 +26,7 @@ user = {
   age: 21,
   isAdmin: true,
   id: "123",
+  likes: [{ post: "post uno" }, { post: "post dos" }],
 };
 
 //ARRAY TYPES
@@ -32,3 +34,13 @@ let arrayNumbers: number[] = [1, 2, 3, 4, 5, 6];
 let arrayStrings: Array<string> = ["a", "b", "c"];
 let arrayObjects: { name: string; age: number }[] = [{ name: "Leo", age: 21 }];
 let arrayIds: Array<{ ids: string | number }> = [{ ids: 123 }, { ids: "321" }];
+
+//FUNCTION TYPES => Params types | return types
+function add(a: number, b: number): number {
+  const result = a + b;
+  return result;
+}
+
+function greeting(name: string): void {
+  console.log("Hi, " + name);
+}
