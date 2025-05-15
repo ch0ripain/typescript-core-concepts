@@ -29,13 +29,13 @@ user = {
   likes: [{ post: "post uno" }, { post: "post dos" }],
 };
 
-//ARRAY TYPES
+// ARRAY TYPES
 let arrayNumbers: number[] = [1, 2, 3, 4, 5, 6];
 let arrayStrings: Array<string> = ["a", "b", "c"];
 let arrayObjects: { name: string; age: number }[] = [{ name: "Leo", age: 21 }];
 let arrayIds: Array<{ ids: string | number }> = [{ ids: 123 }, { ids: "321" }];
 
-//FUNCTION TYPES => Params types | return types | defining function types
+// FUNCTION TYPES => Params types | return types | defining function types
 function greeting(name: string): void {
   console.log("Hi, " + name);
 }
@@ -45,7 +45,7 @@ function add(a: number, b: number): number {
   return result;
 }
 
-//CUSTOM TYPES | TYPES ALIASES
+// CUSTOM TYPES | TYPES ALIASES
 type AddFn = (a: number, b: number) => number;
 
 function calculate(a: number, b: number, calcFn: AddFn): number {
@@ -100,7 +100,7 @@ function login(credentials: Credentials) {
 
 login(new AuthCredentials());
 
-//MERGING TYPES WITH & OPERATOR
+// MERGING TYPES WITH & OPERATOR
 type Admin = {
   permissions: string[];
 };
@@ -119,9 +119,20 @@ let admin: AppAdmin = {
   permissions: ["login", "add", "delete"],
 };
 
-//LITERAL TYPES
+// LITERAL TYPES
 let role: "admin" | "user" | "editor";
 role = "user";
 role = "admin";
 role = "editor";
 // role = 'god'
+
+// TYPE GUARDS
+//function someAction(a: number, role: 'admin' | 'user') : void {}
+
+type Role = "admin" | "user" | "editor";
+
+function someAdminAction(action: string, role: Role): void {
+  if (role === "admin") {
+    // ...
+  }
+}
