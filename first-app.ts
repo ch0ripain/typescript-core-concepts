@@ -99,3 +99,23 @@ function login(credentials: Credentials) {
 }
 
 login(new AuthCredentials());
+
+//MERGING TYPES WITH & OPERATOR
+type Admin = {
+  permissions: string[];
+};
+
+type AppUser = {
+  email: string;
+  password: string;
+};
+
+type AppAdmin = Admin & AppUser;
+
+let admin: AppAdmin = {
+  email: "admin@gmai.com",
+  password: "123",
+  permissions: ["login", "add", "delete"],
+};
+
+// INTERFACE => interface AppAdmin extends Admin, AppUser { newValues }
