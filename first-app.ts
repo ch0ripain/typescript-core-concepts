@@ -1,6 +1,6 @@
 let userName = "Leo"; // Infer type string | let userName: string; && number & boolean
 
-// Union types
+// UNION TYPES
 let userId: string | number; // Concatenate at least two types
 userId = 123;
 userId = "321";
@@ -8,7 +8,7 @@ userId = "321";
 // userId = []
 // userId = {}
 
-// Object types
+// OBJECT TYPES
 
 // let user: object;
 let user: {
@@ -26,3 +26,9 @@ user = {
   isAdmin: true,
   id: "123",
 };
+
+//ARRAY TYPES
+let arrayNumbers: number[] = [1, 2, 3, 4, 5, 6];
+let arrayStrings: Array<string> = ["a", "b", "c"];
+let arrayObjects: { name: string; age: number }[] = [{ name: "Leo", age: 21 }];
+let arrayIds: Array<{ ids: string | number }> = [{ ids: 123 }, { ids: "321" }];
