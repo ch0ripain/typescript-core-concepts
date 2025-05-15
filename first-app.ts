@@ -136,3 +136,29 @@ function someAdminAction(action: string, role: Role): void {
     // ...
   }
 }
+
+// GENERIC TYPES => FLEXIBLE TYPES TEMPLATES
+type DataStorage<T> = {
+  storage: T[];
+  add: (data: T) => void;
+};
+
+const textStorage: DataStorage<string> = {
+  storage: [],
+  add(nombre) {},
+};
+
+const userStorage: DataStorage<User> = {
+  storage: [],
+  add(user) {},
+};
+
+// GENERIC FUNCTION
+function merge<T, U>(a: T, b: U) {
+  return {
+    ...a,
+    ...b,
+  };
+}
+
+const nUser = merge({ name: "Leo" }, { age: 21 });
