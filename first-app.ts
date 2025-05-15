@@ -45,7 +45,7 @@ function add(a: number, b: number): number {
   return result;
 }
 
-//Custom types | Type aliases
+//CUSTOM TYPES | TYPES ALIASES
 type AddFn = (a: number, b: number) => number;
 
 function calculate(a: number, b: number, calcFn: AddFn): number {
@@ -74,3 +74,11 @@ newUser = {
   id: 123,
   calc: add,
 };
+
+// OBJECT TYPES WITH INTERFACES
+interface Credentials {
+  email: string;
+  password: string;
+}
+
+let creds: Credentials = { email: "leo@gmail.com", password: "123" };
