@@ -75,10 +75,27 @@ newUser = {
   calc: add,
 };
 
-// OBJECT TYPES WITH INTERFACES
+// INTERFACES FOR OBJECT TYPES
 interface Credentials {
   email: string;
   password: string;
 }
 
+// INTERFACES CAN BE EASILY EXTENDED
+// interface Credentials {
+//     userName: string;
+// }
+
 let creds: Credentials = { email: "leo@gmail.com", password: "123" };
+
+// INTERFACES CAN BE USED ALONG CLASSES
+class AuthCredentials implements Credentials {
+  email: string;
+  password: string;
+}
+
+function login(credentials: Credentials) {
+  //...
+}
+
+login(new AuthCredentials());
