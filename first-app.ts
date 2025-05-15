@@ -45,12 +45,32 @@ function add(a: number, b: number): number {
   return result;
 }
 
-function calculate(
-  a: number,
-  b: number,
-  calcFn: (a: number, b: number) => number
-): number {
+//Custom types | Type aliases
+type AddFn = (a: number, b: number) => number;
+
+function calculate(a: number, b: number, calcFn: AddFn): number {
   return calcFn(a, b);
 }
 
 calculate(12, 20, add);
+
+type StringOrNumber = string | number;
+let postId: StringOrNumber;
+postId = 2;
+postId = "123";
+// postId = true
+
+type User = {
+  name: string;
+  age: number;
+  id: StringOrNumber;
+  calc: AddFn;
+};
+
+let newUser: User;
+newUser = {
+  name: "Leo",
+  age: 21,
+  id: 123,
+  calc: add,
+};
