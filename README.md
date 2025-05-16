@@ -215,6 +215,3 @@ const user2 = merge({ name: "Leo" }, { age: 21 });
 
 > [!NOTE]
 > This is a condensed guide to TypeScript's core concepts. For more detailed information, refer to the [official TypeScript documentation](https://www.typescriptlang.org/docs/).
-
----
-<p align="center">🔷 Made with TypeScript 🔷</p>
