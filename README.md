@@ -1,7 +1,7 @@
 <h1 align="center">🔷 TypeScript Core Concepts & Basics 🔷</h1>
 
 ## 🔠 Primitive Types 
-TypeScript is a superset of JavaScript that adds static typing. It only runs on the development side, which is why in the end it's just JavaScript code in the browser. TypeScript allows us to use primitive types like <code>string</code>, `boolean` or `number`.
+TypeScript is a superset of JavaScript that adds static typing. It only runs on the development side, which is why in the end it's just JavaScript code in the browser. TypeScript allows us to use primitive types like `string`, `boolean` or `number`.
 
 ```typescript
 let name: string = "Leo"
