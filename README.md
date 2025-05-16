@@ -26,7 +26,7 @@ stringOrNumber = "abc"
 ```
 
 ## 📦 Object Types 
-An object is a collection of values, each with its own name. You can use the basic `object` type:
+An object is a collection of values, each with its own name. You can use the default `object` type:
 
 ```typescript
 let myObject: object
